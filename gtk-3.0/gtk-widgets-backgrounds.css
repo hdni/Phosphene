@@ -1,0 +1,184 @@
+/* Button background */
+.button {
+	background-color: @button_background;
+}
+
+.primary-toolbar .button,
+.inline-toolbar .button, 
+column-header.button,
+column-header .button, 
+.toolbar .button,
+.toolbar .button.raised,
+.toolbar .raised .button,
+.toolbar GtkComboBox .button,
+.header-bar .button,
+.spinbutton.vertical .button {
+	background-color: @toolbar_button_background; 
+}
+
+/* Pushed button */
+.button:active {
+	background-color: @button_active_background; 
+}
+
+.trough,
+.trough.highlight {
+	background-color: @trough_bg_color; 
+}
+
+.primary-toolbar .trough {
+	background-color: @trough_bg_alt_color;
+}
+
+.button:active:hover {
+	background-color: @button_active_background; 
+}
+
+.primary-toolbar .button:active:hover,
+.inline-toolbar .button:active:hover, 
+.spinbutton.vertical .button:active:hover,
+.toolbar .button:active:hover,
+.header-bar .button:active:hover,
+.toolbar .button.raised:active:hover,
+.toolbar .raised .button:active:hover {
+	background-color: @toolbar_button_active_hover_background;
+	color: @toolbar_button_active_color;
+}
+
+.primary-toolbar .button:active,
+.inline-toolbar .button:active,
+.toolbar .button:active,
+.header-bar .button:active,
+.toolbar .button.raised:active,
+.toolbar .raised .button:active {
+	background-color: @toolbar_button_active_background;
+}
+
+/* Flipped pushed button background for vertical progressbar through and the like */
+.trough.vertical {
+	background-color: @trough_bg_color; 
+}
+
+/* Prelit button background */
+.button:hover {
+	background-color: @button_hover_background;
+}
+
+column-header.button:hover,
+column-header .button:hover, 
+.toolbar .button:hover,
+.toolbar .button.raised:hover,
+.toolbar .raised .button:hover,
+.toolbar GtkComboBox .button:hover,
+.header-bar .button:hover,
+.spinbutton.vertical .button:hover {
+	background-color: @toolbar_button_background;
+}
+
+/* Prelit button on primary toolbar background */
+.primary-toolbar .button:hover {
+	background-color: transparent;
+}
+
+/* Insensitive button background */
+.button:insensitive {
+	background-image: none;
+	background-color: @button_insensitive_background;
+}
+
+.spinbutton.vertical .button:insensitive,
+.header-bar .button:insensitive,
+.toolbar GtkComboBox .button:insensitive,
+.inline-toolbar .button:insensitive,
+.toolbar .button.raised:insensitive,
+.toolbar .raised .button:insensitive {
+	background-image: none;
+	background-color: @toolbar_button_background;
+}
+
+/* Pushed + Insensitive button background */
+.button:active:insensitive,
+.toolbar .button:active:insensitive,
+.toolbar GtkComboBox .button:active:insensitive {
+	background-color: transparent;
+}
+
+/* Entry background */
+.entry,
+GtkComboBox.combobox-entry .button,
+GtkComboBox.combobox-entry .button:hover,
+GtkComboBox.combobox-entry .button:active,
+.primary-toolbar GtkComboBox.combobox-entry .button:hover,
+.level-bar.trough {
+	background-color: @entry_background;
+	border: 1px solid @borders;
+	border-radius: 4px;
+}
+
+.toolbar .entry,
+.header-bad .entry,
+.primary-toolbar .toolbar .entry,
+.primary-toolbar.toolbar .entry,
+.inline-toolbar.toolbar .entry  {
+	border: none;
+}
+
+/* Entry pushed button background */
+.primary-toolbar GtkComboBox.combobox-entry .button:active,
+.spinbutton .button:active,
+.spinbutton .button:active:hover {
+	background: @button_active_background;
+	border: none;
+	border-radius: 2px;
+}
+
+column-header.button:active,
+column-header .button:active,
+column-header.button:active:hover,
+column-header .button:active:hover {
+	background: @toolbar_button_background;
+}
+
+/* Insensitive entry background */
+.entry:insensitive,
+GtkComboBox.combobox-entry .button:insensitive,
+.level-bar.trough:insensitive {
+	background-color: @entry_background;
+	background-image: none;
+}
+
+/* Primary and inline toolbars background */
+.primary-toolbar .toolbar,
+.primary-toolbar.toolbar,
+.inline-toolbar.toolbar  {
+	background-color: @toolbar_background;
+}
+
+.primary-toolbar .toolbar.vertical,
+.primary-toolbar.toolbar.vertical,
+.inline-toolbar.toolbar.vertical {
+	background-color: @toolbar_background;
+}
+
+/* Active switch background*/
+.scale.progressbar {
+	background-color: @theme_selected_bg_color;
+}
+
+.scale.progressbar.vertical {
+	background-color: @theme_selected_bg_color;
+}
+
+/* Progressbar backgrounds */
+
+.progressbar,
+.progressbar row,
+.progressbar row:hover,
+.progressbar row:selected,
+.progressbar row:selected:focus {
+	background-color: @progressbar_background;
+}
+
+.progressbar.vertical {
+	background: @progressbar_background;
+}

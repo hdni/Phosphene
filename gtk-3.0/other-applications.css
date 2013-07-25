@@ -1,0 +1,206 @@
+/*********************
+ * NEMO File manager *
+ *********************/
+@define-color cluebar_color shade (@theme_base_color, 0.9);
+
+NemoWindow * {
+	-GtkPaned-handle-size: 1;
+}
+
+NemoWindow .view {
+	background-color: @theme_base_color;
+}
+
+NemoWindow .rubberband,
+NemoWindow .view.rubberband {
+	background-color: alpha (@theme_selected_bg_color, 0.35);
+}
+
+/* sidebar */
+
+NemoWindow .sidebar .view {
+	background-color: shade (@theme_alt_color, 1.08);
+	color: @theme_text_color;
+	text-shadow: 0 1px shade (shade (@theme_alt_color, 0.95), 1.04);  
+}
+
+NemoWindow .sidebar .frame {
+	border-right-width: 1px;
+	border-style: solid;
+	border-color: shade (@theme_alt_color, 0.82);
+}
+
+NemoWindow .sidebar row:selected {
+	color: @theme_selected_fg_color;
+	text-shadow: 0 -1px shade (@theme_selected_bg_color, 0.8); 
+}
+
+NemoWindow .sidebar row:backdrop:selected {
+	color: @theme_text_color;
+	text-shadow: none; 
+}
+
+/* desktop mode */
+.nemo-desktop.nemo-canvas-item {
+	color: @theme_alt_color;
+	text-shadow: 1px 1px alpha (#000000, 0.8);
+}
+
+.nemo-desktop.nemo-canvas-item:active {
+	background-image: none;
+	background-color: alpha (@theme_alt_color, 0.84);
+	color: @theme_text_color;
+}
+
+.nemo-desktop.nemo-canvas-item:selected {
+	background-image: none;
+	background-color: alpha (@theme_selected_bg_color, 0.84);
+	color: @theme_selected_fg_color;
+}
+
+.nemo-desktop.nemo-canvas-item:active,
+.nemo-desktop.nemo-canvas-item:prelight,
+.nemo-desktop.nemo-canvas-item:selected {
+	text-shadow: none;
+}
+
+/* inactive pane */
+
+.nemo-inactive-pane .view {
+	background-color: shade(@theme_base_color, 0.9);
+}
+
+/* Toolbar */
+NemoWindow .toolbar .button {
+	border-image: none;
+}
+
+/* Misc */
+NemoView.frame,
+NemoNotebook.notebook {
+	border-right-width: 0;
+	border-left-width: 0;
+	border-bottom-width: 0;
+}
+
+NemoNotebook.notebook tab.top,
+NemoNotebook.notebook tab.bottom {
+	border-right-width: 1px;
+	border-left-width: 1px;
+}
+
+NemoNotebook .frame {
+	border-width: 1px 0 0 0;
+}
+
+.nemo-cluebar-label {
+	font: normal;
+	text-shadow: 0 1px shade (@cluebar_color, 1.06);
+}
+
+NemoTrashBar.info,
+NemoXContentBar.info,
+NemoSearchBar.info,
+NemoQueryEditor.info {
+	background-color: @cluebar_color;
+	border-bottom-color: shade (@cluebar_color, 0.92);
+	border-radius: 0;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+	color: @theme_text_color;
+}
+
+NemoTrashBar .button,
+NemoXContentBar .button,
+NemoSearchBar .button,
+NemoQueryEditor .button {
+	border-radius: 0;
+}
+
+/****************
+ * PopOver menu *
+ ****************/
+GraniteWidgetsPopOver {
+	-GraniteWidgetsPopOver-arrow-width: 24;
+	-GraniteWidgetsPopOver-arrow-height: 12;
+	-GraniteWidgetsPopOver-border-radius: 6;
+	-GraniteWidgetsPopOver-border-width: 1;
+	-GraniteWidgetsPopOver-shadow-size: 18;
+	
+	border-style: solid;
+	border-color: shade (@theme_alt_color, 0.50);
+	background-color: @theme_base_color;
+	margin: 0;
+}
+
+GraniteWidgetsPopOver * {
+	background-color: @theme_base_color;
+}
+
+GraniteWidgetsPopOver .sidebar.view {
+	background-color: @theme_base_color;
+}
+
+GraniteWidgetsPopOver .button {
+	background-image: none;
+	background-color: alpha (#fff, 0.0);
+}
+
+GraniteWidgetsPopOver .button:active,
+GraniteWidgetsPopOver .button:hover:active {
+	background-image: none;
+	background-color: alpha (#000, 0.05);
+}
+
+GraniteWidgetsPopOver .entry {
+	background-image: linear-gradient(to bottom,
+		shade (@theme_base_color, 0.88),
+		shade (@theme_base_color, 0.94) 20px,
+		shade (@theme_base_color, 0.96));
+}
+
+.button.app {
+	border-width: 0;
+	border-radius: 5px;
+}
+
+.app:hover,
+.app:focus {
+	background-color: alpha (#000, 0.15);
+}
+
+/*****************
+ * Ubuntu styles *
+ *****************/
+/* overlay scrollbar */
+OsThumb {
+	color: shade (@theme_text_color, 1.6);
+}
+
+OsThumb:selected,
+OsScrollbar:selected {
+	background-color: @theme_selected_bg_color;
+}
+
+OsThumb:active,
+OsScrollbar:active {
+	background-color: shade (@theme_alt_color, 0.6);
+}
+
+OsThumb:insensitive,
+OsScrollbar:insensitive {
+	background-color: shade (@theme_alt_color, 0.85);
+}
+
+/* scrolled window */
+.ubuntu-online-accounts.frame {
+	border-style: solid;
+	border-color: @borders;
+	border-width: 1px;
+	border-radius: 2px;
+	padding: 0;
+}
+
+.ubuntu-online-accounts.frame {
+	border-top-width: 0;
+}
