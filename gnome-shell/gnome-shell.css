@@ -1656,24 +1656,15 @@ StScrollBar StButton#vhandle:active {
 }
 
 .summary-source-button:hover .summary-source {
-	background-color: rgba(111,115,127,0.2);
-	border: 1px solid rgba(255,255,255,0.1);
-	border-bottom: none;
-	border-left: none;
-	border-right: none;
-	box-shadow: 0px 1px 3px rgba(0,0,0,0.6);
+	background: rgba(0,0,0,0.4);
 	color:white;
+	border-radius: 4px;
 }
 
 .summary-source-button:focus .summary-source,
 .summary-source-button:selected .summary-source {
-	background: rgba(0,0,0,0.2);
-	box-shadow: inset 0px 1px 2px rgba(0,0,0,0.4);
-	border: 1px solid rgba(255,255,255,0.1);
-	border-top: none;
-	border-left: none;
-	border-right: none;
-	border-radius: 2px;
+	background: #4b9ddb;
+	border-radius: 4px;
 }
 
 .summary-source {
