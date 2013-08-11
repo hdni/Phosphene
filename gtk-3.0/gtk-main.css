@@ -42,8 +42,8 @@
 @define-color sidebar_selected_bg @theme_selected_bg_color;
 
 @define-color sidebar_scrollbar_trough transparent;
-@define-color sidebar_scrollbar_slider shade(@sidebar_bg, 2.00);
-@define-color sidebar_scrollbar_slider_hover shade(@sidebar_bg, 3.00);
+@define-color sidebar_scrollbar_slider @trough_bg_alt_color;
+@define-color sidebar_scrollbar_slider_hover @borders_focused;
 
 @define-color borders @theme_alt_color;
 @define-color borders_focused #7c90a3;
