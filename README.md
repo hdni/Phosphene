@@ -1,5 +1,5 @@
 # Phosphene
-A GNOME 3.8 theme for GNOME Shell, GTK 3, Mutter, and Firefox. 
+A GNOME 3.8 theme for GNOME Shell, GTK 3, Mutter, and Firefox. [See the preview](http://hdni.github.io/rice/assets/phosphene_preview.png).
 
 ## Installation
 ### GNOME Shell, GTK 3, Mutter
