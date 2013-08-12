@@ -74,15 +74,16 @@
 }
 
 .tabs-newtab-button {
-    margin-right: 6px !important;
-    margin-left: 6px !important;
-    margin-bottom: 8px !important;
-    margin-top: 6px !important;
-    padding-left: 2px !important;
-    padding-right: 2px !important;
-    background: #505257 !important;
-    border: none !important;
-    border-radius: 2px !important;
+    margin-right: 4px !important;
+    margin-left: 4px !important;
+    margin-bottom: 4px !important;
+    margin-top: 2px !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+    background: #fff !important;
+    border: 2px solid #bcc3cc !important;
+    border-radius: 16px !important;
+    transition: all 0.2s ease 0s;
 }    
 
 .tabs-newtab-button .toolbarbutton-icon {
@@ -90,15 +91,14 @@
 }
 
 .tabs-newtab-button:hover {
-    background: #6f737f !important;
+    background: #728ba3 !important;
+    border-color: #fff !important;
     transition: all 0.2s ease 0s;
 }
 
 .tabs-newtab-button:active {
-    background: #252629 !important;
-    box-shadow: inset 0px 0px 2px rgba(0,0,0,0.1) !important;
-    border-top-color: transparent !important;
-    border-bottom-color: rgba(255,255,255,0.1) !important;
+    background: #728ba3 !important;
+    border-color: #728ba3 !important;
     transition: all 0.2s ease 0s;
 }
 
@@ -106,21 +106,21 @@
     background: #e8eaed !important;
     border: none !important;
     margin-top: 0 !important;
-    padding-left: 2px !important;
-    padding-right: 2px !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
     padding-bottom: 0 !important;
 }
 
 .tabbrowser-tab {
-    border: none !important;
+    border: 2px solid #bcc3cc !important;
     border-radius: 16px !important;
-    background: transparent !important;
-    margin: 1px !important;
-    padding: 4px !important;
+    background: #fff !important;
+    margin: 4px !important;
+    padding: 2px !important;
     margin-bottom: 4px !important;
     margin-top: 2px !important;
-    max-height: 28px !important;
-    min-height: 28px !important;
+    max-height: 30px !important;
+    min-height: 30px !important;
 }
 
 .tabbrowser-tab:first-child {
@@ -132,32 +132,38 @@
 }
 
 .tabbrowser-tab:hover {
-    background: transparent !important;
+    background: #728ba3 !important;
+    border-color: #fff !important;
+    transition: all 0.2s ease 0s !important;
+}
+
+.tabbrowser-tab:active {
+    border-color: #728ba3 !important;
     transition: all 0.2s ease 0s !important;
 }
 
 .tabbrowser-tab[selected=true], .tabbrowser-tab[selected=true]:hover {
-    background: #bcc3cc !important;
-    border-top: none !important;
-    transition: none !important;
+    background: #fff !important;
+    border-color: #728ba3 !important;
+    transition: all 0.2s ease 0s;
 }
 
 .tab-text {
     font-size: 10pt !important;
     text-align: center !important;
-    color: #7c90a3 !important;
+    color: #728ba3 !important;
     margin-left: 2px !important;
     margin-right: 2px !important;
     margin-bottom: 1px !important;
 }
 
 .tabbrowser-tab:hover .tab-text {
-    color: #3c4c5c !important;
+    color: #fff !important;
     transition: all 0.2s ease 0s;
 }
 
 .tabbrowser-tab[selected="true"] .tab-text {
-    color: #fff !important;
+    color: #3c4c5c !important;
 }
 
 /*Disable FXChrome tab background for tabs*/
@@ -227,13 +233,16 @@
 
 /* Icon replacements */
 .tabs-newtab-button .toolbarbutton-icon {
-    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QUJEi4LVOvCEQAAACdJREFUOMtjYBje4D8U4FPDRKklA28AI7qfidLEyMhINReMxsKwAACAUhQA+0tI1AAAAABJRU5ErkJggg==) !important;
+    list-style-image: url(file:///home/will/Pictures/theme/firefox/phosphene/new_tab.png) !important;
     -moz-image-region: rect(0,16px,16px,0) !important;
-    opacity: 0.4;
+    opacity: 1.0;
+    transition: all 0.2s ease 0s;
 }
 
-.tabs-newtab-button:hover .toolbarbutton-icon {
-    opacity: 0.9;
+.tabs-newtab-button:hover .toolbarbutton-icon,
+.tabs-newtab-button:active .toolbarbutton-icon {
+    list-style-image: url(file:///home/will/Pictures/theme/firefox/phosphene/new_tab_hover.png) !important;
+    -moz-image-region: rect(0,16px,16px,0) !important;
     transition: all 0.2s ease 0s;
 }
 
@@ -288,9 +297,14 @@
     -moz-image-region: rect(0,16px,16px,0) !important;
 }
 
-#urlbar-reload-button .toolbarbutton-icon,
-#reload-button .toolbarbutton-icon {
+#urlbar-reload-button .toolbarbutton-icon {
     list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QcOFzk4D2SOowAAASJJREFUOMvN0r9qVEEUBvDfLku0CAsJWBmrNFsFAwNuM1Umdlb7BqaJkBR5i9VCn0FLhTSBNLnd7bKXkEaJbSBpRSzUbTbNCJfN3evaeWA4M3P4vvOdP/zFirL6WJTVxqJ4ZwmCGX7iDcYphl+tBEVZreAl9rCJtVr4CocphuLPR28O/Bgn2F4gaHWOULcGfojTDL7GCI9yeIrXGKQYPtUJ6gpeYSuDn6YYvmXiAgcphq+tTSzKaoKAUYrh2JLWrd0H2Z/5B+s1qJm1jLSP7/iRYujPK/iS/U5LwufZf24q4X3246Ks1hqyr+Ntfn5oauIDnNcmcZT70cEu3uEJLvEsxTC9t4lLLNIFXqQYbptKkGK4wTDvRIXf+Uywj2Ed/H/YHV+FUeRkRIlHAAAAAElFTkSuQmCC) !important;
+    -moz-image-region: rect(0,16px,16px,0)!important;
+    opacity: 1.0 !important;
+}
+
+#reload-button .toolbarbutton-icon {
+    list-style-image: url(file:///home/will/Pictures/theme/firefox/phosphene/reload_normal.png) !important;
     -moz-image-region: rect(0,16px,16px,0)!important;
     opacity: 1.0 !important;
 }
@@ -302,9 +316,14 @@
     transition: all 0.2s ease 0s;
 }
 
-#urlbar-stop-button .toolbarbutton-icon,
-#stop-button .toolbarbutton-icon {
+#urlbar-stop-button .toolbarbutton-icon {
     list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QcOFzoIApDtzAAAALNJREFUOMvtkrEOwVAUhj8ixGDyAH2Ju17TTRpBotjwdMREmiAS0knXPonYlYXlH6RKPUDPdPLnP+d+58+FsipZIYqTM3AFps6am7QmsALazprOu7+Ws/QCjIEwipOhtBDwgXXWnLdgBrQ0sBGlD5yAeeEJQq7rtYGkHTBx1jyy3uqPfJ5f+sIQG0LvAQd5usBeFPcigqWGjwpzpL4PLP45wQO2QOCsSZ01KRAoB6/8+Z/1ApYcK4kA4duDAAAAAElFTkSuQmCC) !important;
+    -moz-image-region: rect(0,16px,16px,0)!important;
+    opacity: 1.0 !important;
+}
+
+#stop-button .toolbarbutton-icon {
+    list-style-image: url(file:///home/will/Pictures/theme/firefox/phosphene/stop_normal.png) !important;
     -moz-image-region: rect(0,16px,16px,0)!important;
     opacity: 1.0 !important;
 }
