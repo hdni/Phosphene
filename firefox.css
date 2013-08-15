@@ -233,7 +233,7 @@
 
 /* Icon replacements */
 .tabs-newtab-button .toolbarbutton-icon {
-    list-style-image: url(file:///home/will/Pictures/theme/firefox/phosphene/new_tab.png) !important;
+    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QgJAhMQUNAkggAAAC5JREFUOMtjYBjeoKh78f+i7sX/8alhotSSgTeAEd3PxGjqK41lpJoLRmNhWAAAHjsOjI3QxdAAAAAASUVORK5CYII=) !important;
     -moz-image-region: rect(0,16px,16px,0) !important;
     opacity: 1.0;
     transition: all 0.2s ease 0s;
@@ -241,7 +241,7 @@
 
 .tabs-newtab-button:hover .toolbarbutton-icon,
 .tabs-newtab-button:active .toolbarbutton-icon {
-    list-style-image: url(file:///home/will/Pictures/theme/firefox/phosphene/new_tab_hover.png) !important;
+    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QgJAhkOUDDxawAAACdJREFUOMtjYBje4D8U4FPDRKklA28AI7qfidLEyMhINReMxsKwAACAUhQA+0tI1AAAAABJRU5ErkJggg==) !important;
     -moz-image-region: rect(0,16px,16px,0) !important;
     transition: all 0.2s ease 0s;
 }
@@ -304,7 +304,7 @@
 }
 
 #reload-button .toolbarbutton-icon {
-    list-style-image: url(file:///home/will/Pictures/theme/firefox/phosphene/reload_normal.png) !important;
+    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAvADDAMwtT/joAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QgJAh8PcW1mewAAASFJREFUOMvN0r9KXEEUBvCfskiKIKxgpVZptgoRLOwl6aysp1EQBS1yYd5h9cL4AlqY20WwCaTRNzCIjaKtoK2IhZpm00zgslzXtfPAcGbm8H3nO394xYqy+lmU1fRL8ZEhCHp4xDa6KYangQRFWY1hGSv4hHYtfInNFMPx/49WH3gKvzD7gqCPfYRGa+AP+J3B11jCZA7/xRY6KYaDOkFdwTo+Z/CXFMNdJj7GRorhamATi7I6wRyWUgyHhrTR2r2T/ZE3WKtBTW/ASMdxj4cUw3i/govsFwYk/Jb9eVMJ+9l3i7JqN2SfQMrPH00l7GI1T+KsKKvvuR8j+IodzOAMe42bOMQinWIxxXDbVIIUww3m8078wXM+J1jDfB38PuwfO61OvO23THsAAAAASUVORK5CYII=) !important;
     -moz-image-region: rect(0,16px,16px,0)!important;
     opacity: 1.0 !important;
 }
@@ -323,7 +323,7 @@
 }
 
 #stop-button .toolbarbutton-icon {
-    list-style-image: url(file:///home/will/Pictures/theme/firefox/phosphene/stop_normal.png) !important;
+    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAcgCLAKPY7g7jAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QgJAiESU64R3wAAALNJREFUOMvtkjEKwkAQRZ8iioWVB8hNbIOoYNRO9xKBPUVgLxGxUgIqgpYeR+yNNtr8QtZoPECmGj5/Zt98Fqqq+UKcpGfgCsydNTdpbWAFdJ01vXd/o2DpBZgCWZykY2kZEAJr31y0YAF0NLARZQicAFN6gpCbem0kaQfMnDUP31v/kc/zS18aYkvoA+AgTx/Yi+JeRrDU8FFhTtQPgfSfEwJgC0TOmtxZkwORcgiqn/9ZLx6sLDQ8GAC5AAAAAElFTkSuQmCC) !important;
     -moz-image-region: rect(0,16px,16px,0)!important;
     opacity: 1.0 !important;
 }
@@ -486,4 +486,9 @@ scrollbar > slider {
     /*border: 0px solid transparent;*/
     border: none;
     background-color: transparent !important;
+}
+
+/* Add-ons Manager page */
+#addons-page #header {
+    background: transparent !important;
 }
