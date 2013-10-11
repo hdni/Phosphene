@@ -4,6 +4,7 @@ A GNOME 3.8 theme for GNOME Shell, GTK 3, Mutter, and Firefox. [See the preview]
 ## Installation
 ### GNOME Shell, GTK 3, Mutter
 * Put the entire repository in `/usr/share/themes/`
+* Since there is no GTK 2 theme yet, you'll have to copy the `gtk-2.0` directory from another theme so the Tweak Tool doesn't complain. 
 * You can then use the Tweak Tool to set the themes.
 
 ### Firefox
