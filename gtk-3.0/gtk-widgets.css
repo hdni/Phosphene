@@ -1008,6 +1008,7 @@ GtkComboBox.combobox-entry .button *:active,
 .toolbar .button.raised *:active,
 .toolbar .button *:active,
 .inline-toolbar .button *:active, 
+.inline-toolbar .button *:active, 
 .spinbutton.vertical .button:active:hover,
 .toolbar .button:active,
 .toolbar .button.raised:active,
@@ -1020,7 +1021,10 @@ GtkComboBox.combobox-entry .button *:hover,
 .toolbar .button *:hover,
 .toolbar .button.raised *:hover,
 .toolbar .raised .button *:hover,
-.inline-toolbar .button *:hover {
+.inline-toolbar .button *:hover, 
+.toolbar .button:hover,
+.toolbar .button.raised:hover,
+.toolbar .raised .button:hover {
 	color: @toolbar_button_hover_color;
 }
 
@@ -1382,7 +1386,7 @@ GtkLinkButton.button *:active {
 }
 
 /* close button styling */
-.notebook tab .button,
+/*.notebook tab .button,
 .notebook tab .button:active,
 .notebook tab .button:hover {
 	border-image: none;
@@ -1390,9 +1394,9 @@ GtkLinkButton.button *:active {
 	background-image: none;
 	background-color: transparent;
 	box-shadow: none;
-}
+}*/
 
-.notebook tab .button GtkImage {
+.notebook tab .button {
 	border-radius: 30px;
 	color: @button_foreground;
 	border-style: solid;
@@ -1401,13 +1405,13 @@ GtkLinkButton.button *:active {
 	padding: 0px;
 }
 
-.notebook tab .button GtkImage:hover {
+.notebook tab .button:hover {
 	color: @theme_selected_bg_color;
 	border-color: @theme_selected_bg_color;
 }
 
-.notebook tab .button GtkImage:active,
-.notebook tab .button GtkImage:active:hover {
+.notebook tab .button:active,
+.notebook tab .button:active:hover {
 	background-color: @theme_alt_color;
 	color: @theme_text_color;
 	border-color: @theme_alt_color;
@@ -1707,6 +1711,7 @@ GtkTreeMenu .menuitem,
 .menu .menuitem:active,
 .menu .menuitem:hover {
 	background-color: @theme_selected_bg_color;
+	color: @theme_base_color;
 	text-shadow: none;
 }
 
@@ -1975,6 +1980,7 @@ GtkCheckButton:selected:focus {
 	border-width: 1px;
 	border-style: solid;
 	border-color: @borders;
+	border-radius: 4px;
 
 	-GtkToolbar-button-relief: normal;
 	padding: 2px;
@@ -2263,20 +2269,21 @@ GtkProgressBar.osd.progressbar {
  ****************************/
 .toolbar .suggested-action.button,
 .suggested-action.button {
-	background: @suggested_toolbar_button_bg;
-	color: @suggested_toolbar_button_fg;
+	background: @button_background;
+	color: @button_foreground;
 }
 
 .toolbar .suggested-action.button:hover,
 .suggested-action.button:hover {
-	background: @suggested_toolbar_button_fg;
-	color: @suggester_toolbar_button_bg;
+	background: @button_background;
+	color: @button_hover_foreground;
+	border-color: @button_hover_border;
 }
 
 .suggested-action.button:active,
 .suggested-action.button:hover:active {
-	background: transparent;
-	color: @suggested_toolbar_button_active_fg;
+	background: @button_active_background;
+	color: @button_active_text;
 }
 
 .toolbar .suggested-action.button *,
@@ -2287,6 +2294,50 @@ GtkProgressBar.osd.progressbar {
 .toolbar .suggested-action.button *:hover:active,
 .suggested-action.button *:active,
 .suggested-action.button *:hover:active {
+}
+
+/******************************
+ * Destructive action buttons *
+ ******************************/
+.destructive-action.button {
+    background-image: linear-gradient(to bottom,
+                                      @destructive_action_button_a,
+                                      @destructive_action_button_b);
+
+    color: @destructive_action_button_fg;
+}
+
+.destructive-action.button:hover {
+    background-image: linear-gradient(to bottom,
+                                      shade(@destructive_action_button_a, 1.10),
+                                      shade(@destructive_action_button_b, 1.05));
+}
+
+.destructive-action.button:active,
+.destructive-action.button:hover:active {
+    background-image: linear-gradient(to bottom,
+                                      @destructive_action_button_b,
+                                      @destructive_action_button_a);
+
+    color: @destructive_action_button_fg;
+}
+
+.destructive-action.button {
+    text-shadow: 0 1px @destructive_action_button_shadow;
+    icon-shadow: 0 1px @destructive_action_button_shadow;
+}
+
+.destructive-action.button:active,
+.destructive-action.button:hover:active {
+    text-shadow: 0 1px shade(@destructive_action_button_shadow, 1.15);
+    icon-shadow: 0 1px shade(@destructive_action_button_shadow, 1.15);
+}
+
+.destructive-action.button:backdrop {
+    background-image: none;
+    text-shadow: none;
+    icon-shadow: none;
+    color: @theme_unfocused_text_color;
 }
 
 /**************************
@@ -2314,7 +2365,8 @@ GtkProgressBar.osd.progressbar {
 .selection-mode.toolbar GtkToolButton .button {
 	background: @selection_toolbar_button_bg;
 	color: @selection_toolbar_button_fg;
-	box-shadow: inset 0px 1px 1px rgba(0,0,0,0.1);
+	/*box-shadow: inset 0px 1px 1px rgba(0,0,0,0.1);*/
+	box-shadow: none;
 	border: none;
 	border-radius: 2px;
 }
@@ -2351,7 +2403,8 @@ GtkProgressBar.osd.progressbar {
 .selection-mode.toolbar GtkToolButton.suggested-action .button {
 	background: @selection_toolbar_button_bg;
 	color: @selection_toolbar_button_fg;
-	box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+	/*box-shadow: 0px 1px 1px rgba(0,0,0,0.1);*/
+	box-shadow: none;
 	border: none;
 }
 
@@ -2454,28 +2507,31 @@ GtkAssistant .sidebar {
  *************/
 
 GtkSwitch {
-	border-radius: 8px;
-	padding: 2px;
-	background-color: transparent;
 }
 
 GtkSwitch.trough,
 GtkSwitch.trough:insensitive {
+	margin: 0;
+	padding: 0;
 	border: none;
+	border-width: 0;
+	border-radius: 0;
 	border-image: none;
 	color: transparent;
 	box-shadow: none;
 	background-color: transparent;
-	background-size: 40px 22px;
+	background-size: 40px 23px;
 	background-position: center center;
 	background-repeat: no-repeat;
 	text-shadow: none;
 }
 
 GtkSwitch.slider {
-	background-color: transparent;
+	background: transparent;
+	padding: 0;
 	border: none;
 	border-image: none;
+	border-radius: 0;
 }
 
 /***********************
@@ -2865,16 +2921,13 @@ GtkBubbleWindow .toolbar {
  * CSD *
  *******/
 .titlebar {
-	font: Bold 10;
-
-	padding: 0;
-	border-style: none;
-
+	padding: 6px;
+	border: 2px solid @theme_base_color;  /* separates different toolbars and allows a
+											 2px border radius for window corners */
 	box-shadow: none;
-	background-image: linear-gradient(to bottom,
-		@wm_bg_a,
-		@wm_bg_b);
-	border-radius: 10px 10px 0px 0px;
+	background: @theme_alt_color;
+	color: @theme_text_color;
+	border-radius: 4px; /* makes the toolbar's corners rounded but leaves a black bg */
 }
 
 .titlebar:backdrop {
@@ -2883,60 +2936,54 @@ GtkBubbleWindow .toolbar {
 }
 
 .titlebar .button {
-	icon-shadow: 0px 1px darker (darker (@theme_base_color));
-}
-
-.titlebar .button {
-	border-style: none none solid solid;
-	border-color: darker(@theme_base_color);
 	border-image: none;
-	border-width: 1px;
-	border-radius: 0px;
+	border: none;
+	border-radius: 30px;
 
-	background-image: linear-gradient(to bottom,
-		@wm_button_bg_a,
-		@wm_button_bg_b,
-		@wm_button_bg_c,
-		@wm_button_bg_d);
+	background-image: none;
+	background: @toolbar_button_background;
+	color: @toolbar_button_color;
 }
 
 .titlebar .button:hover {
-	background-image: linear-gradient(to bottom,
-		@wm_button_bg_hover_a,
-		@wm_button_bg_hover_b,
-		@wm_button_bg_hover_c,
-		@wm_button_bg_hover_d);
+	color: @toolbar_button_hover_color;
 }
 
 .titlebar .button:active {
-	background-image: linear-gradient(to bottom,
-		@wm_button_bg_active_a,
-		@wm_button_bg_active_b,
-		@wm_button_bg_active_c);
+	border-image: none;
+	border: none;
+	border-radius: 30px;
+
+	background-image: none;
+	background: @toolbar_button_active_background;
+	color: @toolbar_button_active_color;
 }
 
 .titlebar .button:first-child {
-	border-style: none none solid none;
-	border-top-left-radius: 10px;
 }
 
 .titlebar .button:last-child {
-	border-top-right-radius: 10px;
 }
 
 .titlebar .button:backdrop {
 	background-image: none;
-	color: darker (@theme_base_color);
 	icon-shadow: none;
 	border-style: none;
 }
 
-.window-frame {
-	border-color: darker(@theme_base_color);
-	border-radius: 10px 10px 0 0;
-	border-width: 1px;
-	border-style: solid;
+.titlebar .separator {
+}
 
+.window-frame {
+    border-color: @theme_base_color;
+    border-width: 4px;
+    border-style: solid; 				  
+    border-radius: 0; 					  /* this radius affects the part inside the outline
+											 making it 0 removes some black around toolbars   */
+	outline: 2px solid @theme_base_color; /* corners' radius is = to the width of the outline */
+	background: @theme_base_color; 		  /* needed to remove the black around the toolbars   */
+
+	/* Keeping the CSS box shadows for consistency with Mutter's shadows for now */
 	box-shadow: 0 2px 8px 3px @wm_shadow;
 
 	/* this is used for the resize cursor area */

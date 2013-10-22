@@ -47,10 +47,18 @@ TerminalWindow GtkNotebook.notebook {
 	text-shadow: none;
 }
 
-NautilusWindow .sidebar .frame {
-	border-width: 0 0 0 0;
+/* Required, else the two bottom corners aren't rounded */
+NautilusWindow .titlebar {
+	border-color: transparent;
+    border-image: url("assets/nautilus-title-border.png") 9 / 9px stretch;
+    border-style: solid;
+    border-width: 2px;
+}
+
+NautilusWindow .sidebar .frame { 
+	border-width: 0 0 0 2px; /* so the sidebar is aligned with the new titlebar */
 	border-style: solid;
-	border-color: @borders;
+	border-color: @theme_base_color;
 	border-radius: 0;
 }
 
@@ -107,6 +115,7 @@ NautilusToolbar .button:active {
 
 NautilusToolbar .toolbar {
 	background: @toolbar_background;
+	border-radius: 4px;
 }
 
 NautilusToolbar .button:active:focus,
