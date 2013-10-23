@@ -514,12 +514,14 @@ StScrollBar StButton#vhandle:active {
 	height: 24px;
 }
 
-/* Hack to remove arrow from appMenu */
+/* Hack to remove arrow from appMenu and other panel buttons */
 .panel-status-menu-box {
 	font-size: 0;
+	spacing: 0;
 }
 
-.panel-status-menu-box *:last-child {
+#appMenu .panel-status-menu-box *:last-child, 
+.system-status-icon:first-child {
 	font-size: 8pt;
 }
 
