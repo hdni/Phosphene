@@ -8,7 +8,8 @@
 .scrollbutton-down,
 .tab-close-button,
 .tab-icon-image,
-#go-button {
+#go-button,
+.toolbarbutton-menu-dropmarker {
     display: none !important;
 }
 
@@ -23,19 +24,21 @@
 
 #nav-bar {
     background: #e8eaed !important;
-    margin-top: 0 !important;
-    padding-right: 8px !important;
-    padding-left: 8px !important;
-    padding-top: 3px !important;
-    margin-bottom: 3px !important;
+    border: none !important;
+    margin-top: 2px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding: 0 4px 2px 4px !important;
     height: 38px !important;
+
+    border-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QcOEwkE+ERsCwAAAFVJREFUOMvtzMENgCAMQNEPLTcC+w+pMcQbJXhyg5p46BvgpWm2x7iZtvCgIvReScd5ba/0VVTI3inAtEXmIxFHHHHEEf8kLiruaVEht1bxzFWE1ioPFvYXTc7cKPcAAAAASUVORK5CYII=) 9 / 9px stretch !important;
+    border-style: solid !important;
+    border-width: 2px !important;
 }
 
 #navigator-toolbox {
-    background: #e8eaed !important;
-    border-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QcOEwkE+ERsCwAAAFVJREFUOMvtzMENgCAMQNEPLTcC+w+pMcQbJXhyg5p46BvgpWm2x7iZtvCgIvReScd5ba/0VVTI3inAtEXmIxFHHHHEEf8kLiruaVEht1bxzFWE1ioPFvYXTc7cKPcAAAAASUVORK5CYII=) 9 / 9px stretch !important;
-    border-width: 2px !important;
-    border-style: solid !important;
+    background: #fff !important;
+    background-image: none !important;
 }
 
 #navigator-toolbox:after {
@@ -43,8 +46,8 @@
 }
 
 #addon-bar {
-    background: #e8ebed !important;
-    border-top: 1px solid #d2d3d4 !important;
+    background: #fff !important;
+    border-top: 1px solid #e8eaed !important;
     height: 36px !important;
 }
 
@@ -56,10 +59,8 @@
     background: #fff !important;
     box-shadow: none !important;
     padding: 0 !important;
-    margin: 0 !important;
-    padding-left: 2px !important;
-    margin-left: 15px !important;
-    margin-right: 4px !important;
+    padding-left: 9px !important;
+    margin: 0 9px 2px 10px !important;
     height: 28px !important;
 }
 
@@ -77,77 +78,78 @@
 }
 
 .tabs-newtab-button {
-    margin-right: 4px !important;
-    margin-left: 4px !important;
-    margin-bottom: 4px !important;
-    margin-top: 2px !important;
-    padding-left: 5px !important;
-    padding-right: 5px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    margin-bottom: 3px !important;
+    margin-top: 4px !important;
+    padding-left: 6px !important;
+    padding-right: 6px !important;
     background: #fff !important;
-    border: 2px solid #bcc3cc !important;
-    border-radius: 16px !important;
+    border-left: 1px solid #e8eaed !important;
+    border-radius: 0 2px 0 0 !important;
     transition: all 0.2s ease 0s;
 }    
 
 .tabs-newtab-button .toolbarbutton-icon {
-    margin-bottom: 1px !important;
+    margin-bottom: 2px !important;
 }
 
 .tabs-newtab-button:hover {
-    background: #728ba3 !important;
-    border-color: #fff !important;
+    background: #f2f4f5 !important;
     transition: all 0.2s ease 0s;
 }
 
 .tabs-newtab-button:active {
-    background: #728ba3 !important;
-    border-color: #728ba3 !important;
+    background: #fff !important;
     transition: all 0.2s ease 0s;
 }
 
+#TabsToolbar {
+    background: #fff !important;
+    padding: 0 !important;
+}
+
 #tabbrowser-tabs {
-    background: #e8eaed !important;
+    background: #fff !important;
     border: none !important;
-    margin-top: 0 !important;
-    padding-left: 6px !important;
-    padding-right: 6px !important;
-    padding-bottom: 0 !important;
+    margin: 12px 0 -2px 0 !important;
+    padding: 0 !important;
 }
 
 .tabbrowser-tab {
-    border: 2px solid #bcc3cc !important;
-    border-radius: 16px !important;
+    border: none !important;
+    border-left: 1px solid #e8eaed !important;
+    border-radius: 1px 0 0 0 !important;
     background: #fff !important;
-    margin: 4px !important;
+    margin: 2px 0 2px 0 !important;
     padding: 2px !important;
-    margin-bottom: 4px !important;
-    margin-top: 2px !important;
     max-height: 30px !important;
     min-height: 30px !important;
 }
 
 .tabbrowser-tab:first-child {
-    margin-left: 4px !important;
+    margin-left: 0px !important;
+    border-left: none !important;
+    border-radius: 2px 0 0 0 !important;
 }
 
 .tabbrowser-tab:last-child {
-    margin-right: 4px !important;
+    margin-right: 0px !important;
 }
 
 .tabbrowser-tab:hover {
-    background: #728ba3 !important;
-    border-color: #fff !important;
+    background: #f2f4f5 !important;
     transition: all 0.2s ease 0s !important;
 }
 
 .tabbrowser-tab:active {
-    border-color: #728ba3 !important;
+    background: #e8eaed !important;
     transition: all 0.2s ease 0s !important;
 }
 
 .tabbrowser-tab[selected=true], .tabbrowser-tab[selected=true]:hover {
-    background: #fff !important;
-    border-color: #728ba3 !important;
+    background: transparent !important;
+    border-left-color: #e8eaed !important;
     transition: all 0.2s ease 0s;
 }
 
@@ -155,13 +157,11 @@
     font-size: 10pt !important;
     text-align: center !important;
     color: #728ba3 !important;
-    margin-left: 2px !important;
-    margin-right: 2px !important;
-    margin-bottom: 1px !important;
+    margin: 0 2px 1px 2px !important;
 }
 
 .tabbrowser-tab:hover .tab-text {
-    color: #fff !important;
+    color: #3c4c5c !important;
     transition: all 0.2s ease 0s;
 }
 
@@ -195,6 +195,7 @@
 #urlbar-go-button {
     padding-top: 2px !important;
     border: none !important;
+    margin-right: 9px !important;
 }
 
 #urlbar-reload-button:hover,
@@ -205,7 +206,7 @@
 
 #back-button {
     padding-top: 1px !important;
-    margin: 8px !important;
+    margin: 7px !important;
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
@@ -213,10 +214,19 @@
 
 #forward-button {
     padding-top: 1px !important;
-    margin: 8px !important;
-    margin-left: 11px !important;
+    margin: 5px !important;
+    margin-left: 7px !important;
     background: transparent !important;
     border: none !important;
+}
+
+#appmenu-toolbar-button {
+    padding: 0 !important;
+    padding-left: 3px !important;
+}
+
+#downloads-indicator-icon {
+    margin-left: -4px !important;
 }
 
 #reload-button,
@@ -242,9 +252,14 @@
     transition: all 0.2s ease 0s;
 }
 
-.tabs-newtab-button:hover .toolbarbutton-icon,
+.tabs-newtab-button:hover .toolbarbutton-icon {
+    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QoUFy0fQ/Sf1wAAAC5JREFUOMtjYBjewMYn5r+NT8x/fGqYKLVk4A1gRPczMZqObFnCSDUXjMbCsAAA6UcLnLXaQ88AAAAASUVORK5CYII=) !important;
+    -moz-image-region: rect(0,16px,16px,0) !important;
+    transition: all 0.2s ease 0s;
+}
+
 .tabs-newtab-button:active .toolbarbutton-icon {
-    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QgJAhkOUDDxawAAACdJREFUOMtjYBje4D8U4FPDRKklA28AI7qfidLEyMhINReMxsKwAACAUhQA+0tI1AAAAABJRU5ErkJggg==) !important;
+    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QoUFy0fQ/Sf1wAAAC5JREFUOMtjYBjewMYn5r+NT8x/fGqYKLVk4A1gRPczMZqObFnCSDUXjMbCsAAA6UcLnLXaQ88AAAAASUVORK5CYII=) !important;
     -moz-image-region: rect(0,16px,16px,0) !important;
     transition: all 0.2s ease 0s;
 }
@@ -300,6 +315,20 @@
     -moz-image-region: rect(0,16px,16px,0) !important;
 }
 
+#appmenu-toolbar-button > .toolbarbutton-icon {
+    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAfACQAKN3rfwTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QoVFxUL9g2QNAAAAERJREFUOMtjYBhowAhj1ExYHMbAwDCJgYFBnAh94S0FsasYGBgYmJAEidUMU8uAbkAeAwPDSyINyGMYNGA0EEcDkSoAAGl6GBCcamcuAAAAAElFTkSuQmCC) !important;
+    -moz-image-region: rect(0,16px,16px,0)!important;
+    margin-top: -1px !important;
+    opacity: 1.0 !important;
+}
+
+#appmenu-toolbar-button:hover > .toolbarbutton-icon {
+    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAfACQAKN3rfwTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QoVFzINxauHZAAAAERJREFUOMtjYBhowAhj2PjEhDEwMExiYGAQJ0Jf+JEtS1YxMDAwMCEJEqsZppYB3YA8BgaGl0QakMcwaMBoII4GIlUAAPc7GBDaa3cgAAAAAElFTkSuQmCC) !important;
+    -moz-image-region: rect(0,16px,16px,0)!important;
+    margin-top: -1px !important;
+    opacity: 1.0 !important;
+}
+
 #urlbar-reload-button .toolbarbutton-icon {
     list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QcOFzk4D2SOowAAASJJREFUOMvN0r9qVEEUBvDfLku0CAsJWBmrNFsFAwNuM1Umdlb7BqaJkBR5i9VCn0FLhTSBNLnd7bKXkEaJbSBpRSzUbTbNCJfN3evaeWA4M3P4vvOdP/zFirL6WJTVxqJ4ZwmCGX7iDcYphl+tBEVZreAl9rCJtVr4CocphuLPR28O/Bgn2F4gaHWOULcGfojTDL7GCI9yeIrXGKQYPtUJ6gpeYSuDn6YYvmXiAgcphq+tTSzKaoKAUYrh2JLWrd0H2Z/5B+s1qJm1jLSP7/iRYujPK/iS/U5LwufZf24q4X3246Ks1hqyr+Ntfn5oauIDnNcmcZT70cEu3uEJLvEsxTC9t4lLLNIFXqQYbptKkGK4wTDvRIXf+Uywj2Ed/H/YHV+FUeRkRIlHAAAAAElFTkSuQmCC) !important;
     -moz-image-region: rect(0,16px,16px,0)!important;
@@ -353,7 +382,6 @@
 }
 
 /* Change icons' opacity so it fits with the rest of the theme */ 
-#appmenu-toolbar-button .toolbarbutton-icon, 
 #tabview-button .toolbarbutton-icon,
 #bookmarks-menu-button .toolbarbutton-icon,
 #bookmarks-button .toolbarbutton-icon,
@@ -362,7 +390,6 @@
     opacity: 0.6 !important;
 }
 
-#appmenu-toolbar-button:hover .toolbarbutton-icon, 
 #tabview-button:hover .toolbarbutton-icon,
 #bookmarks-menu-button:hover .toolbarbutton-icon,
 #bookmarks-button:hover .toolbarbutton-icon,

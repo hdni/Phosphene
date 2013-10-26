@@ -12,7 +12,7 @@ A GNOME 3.10 theme for GNOME Shell, GTK 3, Mutter, and Firefox. [See the preview
 * Install the [FXChrome](https://addons.mozilla.org/en-US/firefox/addon/fxchrome/) theme.
 * Go to your [Add-ons Manager](about:addons), select the User Styles page and then write a new style.
 * Give the style a name and paste the contents of firefox.css.
-* You will need to set to tabs to be on the bottom. To do so, set browser.tabs.onTop to "false" in [about:config](about:config).
+* You will need to set to tabs to be on top. To do so, right click the tab bar and toggle the option, or set browser.tabs.onTop to "true" in [about:config](about:config).
 * Also, right click the tab bar, open the Customize window, and toggle the "Use small icons" option.
 * This style works well with the [Movable Firefox Button](https://addons.mozilla.org/en-us/firefox/addon/movable-firefox-button/), [Favicon Restorer](https://addons.mozilla.org/en-us/firefox/addon/favicon-restorer/?src=search), and [Hide Tabbar](https://addons.mozilla.org/en-us/firefox/addon/hide-tabbar/?src=ss) extensions.
 
