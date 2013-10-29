@@ -300,8 +300,60 @@ StScrollBar StButton#vhandle:active {
 	background-size: contain;
 }
 
-.nm-menu-item-icons {
+/* Network */
+
+.nm-dialog {
+	max-height: 500px;
+	min-height: 450px;
+	min-width: 450px;
+}
+
+.nm-dialog-content {
+	spacing: 20px;
+}
+
+.nm-dialog-header-hbox {
+	spacing: 10px;
+}
+
+.nm-dialog-header-icon {
+	icon-size: 32px;
+}
+
+.nm-dialog-scroll-view {
+	border: 2px solid #e8eaed;
+	border-radius: 4px;
+}
+
+.nm-dialog-header {
+	font-weight: bold;
+}
+
+.nm-dialog-item {
+	font-size: 10pt;
+	border-bottom: none;
+	padding: 10px;
+}
+
+.nm-dialog-item:checked {
+	background: #4b9ddb;
+	color: #fff;
+}
+
+.nm-dialog-item:checked:first-child {
+	border-radius: 2px 2px 0 0;
+}
+
+.nm-dialog-item-box {
+	spacing: 20px;
+}
+
+.nm-dialog-icons {
 	spacing: .5em;
+}
+
+.nm-dialog-icon {
+	icon-size: 16px;
 }
 
 /* Buttons */
@@ -1274,11 +1326,13 @@ StScrollBar StButton#vhandle:active {
 
 .calendar-change-month-back:hover {
 	border-color: #4b9ddb;
+	background-color: transparent;
 	background-image: url("assets/calendar-arrow-left-hover.svg");
 }
 
 .calendar-change-month-forward:hover {
 	border-color: #4b9ddb;
+	background-color: transparent;
 	background-image: url("assets/calendar-arrow-right-hover.svg");
 }
 
