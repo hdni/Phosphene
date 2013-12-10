@@ -45,12 +45,6 @@
     display: none !important;
 }
 
-#addon-bar {
-    background: #fff !important;
-    border-top: 1px solid #e8eaed !important;
-    height: 36px !important;
-}
-
 #urlbar {
     font-size: 10pt !important;
     color: #3c4c5c !important;
@@ -78,10 +72,7 @@
 }
 
 .tabs-newtab-button {
-    margin-right: 0px !important;
-    margin-left: 0px !important;
-    margin-bottom: 3px !important;
-    margin-top: 4px !important;
+    margin: 0 !important;
     padding-left: 6px !important;
     padding-right: 6px !important;
     background: #fff !important;
@@ -112,7 +103,7 @@
 #tabbrowser-tabs {
     background: #fff !important;
     border: none !important;
-    margin: 12px 0 -2px 0 !important;
+    margin: 0 !important;
     padding: 0 !important;
 }
 
@@ -121,7 +112,7 @@
     border-left: 1px solid #e8eaed !important;
     border-radius: 1px 0 0 0 !important;
     background: #fff !important;
-    margin: 2px 0 2px 0 !important;
+    margin: 0 !important;
     padding: 2px !important;
     max-height: 30px !important;
     min-height: 30px !important;
@@ -218,33 +209,44 @@
     margin-left: 7px !important;
     background: transparent !important;
     border: none !important;
-}
-
-#appmenu-toolbar-button {
-    padding: 0 !important;
-    padding-left: 3px !important;
-}
-
-#downloads-indicator-icon {
-    margin-left: -4px !important;
+    opacity: 1 !important;
 }
 
 #reload-button,
 #stop-button,
 #downloads-indicator,
-#downloads-button,
-#appmenu-toolbar-button, 
+#downloads-button, 
+#PanelUI-menu-button, 
 #tabview-button,
 #bookmarks-menu-button,
 #bookmarks-button,
 #home-button,
 #alltabs-button {
-    margin: 8px !important;
+    padding: 5px !important;
+    margin: 3px !important;
     background: transparent !important;
     border: none !important;
 }
 
+#PanelUI-menu-button {
+    margin: 3px 3px 2px 3px !important;
+}
+
 /* Icon replacements */
+#PanelUI-menu-button .toolbarbutton-icon {
+    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAfACQAKN3rfwTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QoVFxUL9g2QNAAAAERJREFUOMtjYBhowAhj1ExYHMbAwDCJgYFBnAh94S0FsasYGBgYmJAEidUMU8uAbkAeAwPDSyINyGMYNGA0EEcDkSoAAGl6GBCcamcuAAAAAElFTkSuQmCC) !important;
+    -moz-image-region: rect(0,16px,16px,0)!important;
+    transition: all 0.2s ease 0s;
+}
+
+#PanelUI-menu-button:hover .toolbarbutton-icon,
+#PanelUI-menu-button:active .toolbarbutton-icon,
+#PanelUI-menu-button[open] .toolbarbutton-icon {
+    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAfACQAKN3rfwTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QoVFzINxauHZAAAAERJREFUOMtjYBhowAhj2PjEhDEwMExiYGAQJ0Jf+JEtS1YxMDAwMCEJEqsZppYB3YA8BgaGl0QakMcwaMBoII4GIlUAAPc7GBDaa3cgAAAAAElFTkSuQmCC) !important;
+    -moz-image-region: rect(0,16px,16px,0)!important;
+    transition: all 0.2s ease 0s;
+}
+
 .tabs-newtab-button .toolbarbutton-icon {
     list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QgJAhMQUNAkggAAAC5JREFUOMtjYBjeoKh78f+i7sX/8alhotSSgTeAEd3PxGjqK41lpJoLRmNhWAAAHjsOjI3QxdAAAAAASUVORK5CYII=) !important;
     -moz-image-region: rect(0,16px,16px,0) !important;
@@ -313,20 +315,6 @@
 #downloads-indicator-notification {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QcOFy8zhC7i/AAAALhJREFUOMvtk60KAlEQhT+1+gSCRqPYLLdY5YJNEG5WfCTN4wMs3GJ2glgEMYlJQfOCmAQtG5Z1ryyIWByYMDPnDIf5gV9bKVQw1j3SsXrJxZY/VfBvkNqCsW4KjAryZuplnFUwAaIC5CjBvt6Bsa4KLIF2gLwGuurlFjwkY10NWAH1TOkEdNTL5e0Q1csZ6APXVDoGellycAvqZQMMgHviQ/Wyy8NWQpM67reHRrMVAwv1Mv/aNz4ByvQwmCXjePkAAAAASUVORK5CYII=) !important;
     -moz-image-region: rect(0,16px,16px,0) !important;
-}
-
-#appmenu-toolbar-button > .toolbarbutton-icon {
-    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAfACQAKN3rfwTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QoVFxUL9g2QNAAAAERJREFUOMtjYBhowAhj1ExYHMbAwDCJgYFBnAh94S0FsasYGBgYmJAEidUMU8uAbkAeAwPDSyINyGMYNGA0EEcDkSoAAGl6GBCcamcuAAAAAElFTkSuQmCC) !important;
-    -moz-image-region: rect(0,16px,16px,0)!important;
-    margin-top: -1px !important;
-    opacity: 1.0 !important;
-}
-
-#appmenu-toolbar-button:hover > .toolbarbutton-icon {
-    list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QAfACQAKN3rfwTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH3QoVFzINxauHZAAAAERJREFUOMtjYBhowAhj2PjEhDEwMExiYGAQJ0Jf+JEtS1YxMDAwMCEJEqsZppYB3YA8BgaGl0QakMcwaMBoII4GIlUAAPc7GBDaa3cgAAAAAElFTkSuQmCC) !important;
-    -moz-image-region: rect(0,16px,16px,0)!important;
-    margin-top: -1px !important;
-    opacity: 1.0 !important;
 }
 
 #urlbar-reload-button .toolbarbutton-icon {
