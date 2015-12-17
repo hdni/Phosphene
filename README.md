@@ -7,6 +7,13 @@ A GNOME 3.10 theme for GNOME Shell, GTK 3, Mutter, and Firefox. [See the preview
 * Since there is no GTK 2 theme yet, you'll have to copy the `gtk-2.0` directory from another theme so the Tweak Tool doesn't complain. 
 * You can then use the Tweak Tool to set the themes.
 
+#### Arch Linux
+Arch Linux users can install the theme from the AUR
+
+[https://aur.archlinux.org/packages/gtk-theme-phosphene-git/](https://aur.archlinux.org/packages/gtk-theme-phosphene-git/)
+
+**Note:** If you're having trouble with the AUR packages please email the package maintainer at zach@zach-adams.com before creating an issue.
+
 ### Firefox
 * Install the [Stylish](https://addons.mozilla.org/en-US/firefox/addon/stylish/) extension.
 * Install the [FXChrome](https://addons.mozilla.org/en-US/firefox/addon/fxchrome/) theme.
